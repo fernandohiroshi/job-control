@@ -8,7 +8,7 @@ export function Refresh() {
   return (
     <button
       onClick={() => router.refresh()}
-      className="duration-300 ease-in-out bg-dark px-3 py-1 rounded hover:bg-dark/80"
+      className="bg-dark hover:bg-dark/80 px-3 py-1 rounded duration-300 ease-in-out"
       title="Refresh"
     >
       <FiRefreshCcw size={24} />

@@ -1,14 +1,18 @@
 "use client";
 
+// External libraries
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Input } from "@/components/input";
 import { FiSearch, FiX } from "react-icons/fi";
 import { useState } from "react";
+
+// Internal components and utilities
+import { Input } from "@/components/input";
 import { FormTicket } from "./components/formTicket";
 import { api } from "@/lib/api";
 
+// Validation schema for the form
 const schema = z.object({
   email: z
     .string()
@@ -36,11 +40,13 @@ export default function OpenTicket() {
     resolver: zodResolver(schema),
   });
 
+  // Clears the selected customer
   function handleClearCustomer() {
     setCustomer(null);
     setValue("email", "");
   }
 
+  // Searches for the customer based on email
   async function handleSearchCustomer(data: FormData) {
     const response = await api.get("/api/customer", {
       params: {
@@ -60,20 +66,20 @@ export default function OpenTicket() {
   }
 
   return (
-    <div className="w-full mx-auto max-w-2xl px-4 rounded-xl">
-      <h1 className="font-semibold text-3xl text-center py-2 mt-24 animate-pulse">
+    <div className="mx-auto px-4 rounded-xl w-full max-w-2xl">
+      <h1 className="mt-24 py-2 font-semibold text-3xl text-center animate-pulse">
         Create task
       </h1>
 
       <main className="flex flex-col mt-4 mb-2">
         {customer ? (
-          <div className="flex justify-between items-center px-4 mb-4 bg-slate-200 text-black rounded ">
+          <div className="flex justify-between items-center bg-slate-200 mb-4 px-4 rounded text-black">
             <p className="text-lg">
               <span className="font-semibold">Selected client: </span>
               {customer.name}
             </p>
             <button
-              className="text-red hover:scale-125 ease-in-out duration-300 h-11 px-2 flex justify-center items-center rounded-full"
+              className="text-red hover:scale-125 flex justify-center items-center px-2 rounded-full h-11 duration-300 ease-in-out"
               onClick={handleClearCustomer}
             >
               <FiX size={30} />
@@ -81,7 +87,7 @@ export default function OpenTicket() {
           </div>
         ) : (
           <form
-            className="py-4 px-2 bg-white/20 rounded-xl"
+            className="bg-white/20 px-2 py-4 rounded-xl"
             onSubmit={handleSubmit(handleSearchCustomer)}
           >
             <div className="flex flex-col gap-3 text-rose-500">
@@ -99,7 +105,7 @@ export default function OpenTicket() {
 
               <button
                 type="submit"
-                className="w-full h-11 flex items-center justify-center gap-2 px-4 rounded-md text-white bg-blue/80 hover:bg-blue ease-in-out duration-200 font-semibold tracking-wide hover:tracking-widest"
+                className="flex justify-center items-center gap-2 bg-blue/80 hover:bg-blue px-4 rounded-md w-full h-11 font-semibold text-white tracking-wide hover:tracking-widest duration-200 ease-in-out"
               >
                 Search for client <FiSearch />
               </button>

@@ -22,13 +22,13 @@ export function Input({
   return (
     <>
       <input
-        className="w-full border-2 rounded h-11 px-2 text-black"
+        className="border-2 px-2 rounded w-full h-11 text-black"
         placeholder={placeholder}
         type={type}
         {...register(name, rules)}
         id={name}
       />
-      {error && <p className="text-red-500 my-1">{error}</p>}
+      {error && <p className="my-1 text-red-500">{error}</p>}
     </>
   );
 }

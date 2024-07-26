@@ -1,12 +1,20 @@
 "use client";
 
+// Importing React Hook Form for form management
 import { useForm } from "react-hook-form";
+
+// Importing Zod for schema validation and resolver for React Hook Form
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+
+// Importing custom Input component and API helper
 import { Input } from "@/components/input";
 import { api } from "@/lib/api";
+
+// Importing useRouter for navigation
 import { useRouter } from "next/navigation";
 
+// Validation schema for the form
 const schema = z.object({
   name: z.string().min(1, "The name field is required."),
   email: z
@@ -30,6 +38,7 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
+// NewCustomerForm component: form to add a new customer
 export function NewCustomerForm({ userId }: { userId: string }) {
   const {
     register,
@@ -41,6 +50,7 @@ export function NewCustomerForm({ userId }: { userId: string }) {
 
   const router = useRouter();
 
+  // Handles form submission and customer registration
   async function handleRegisterCustomer(data: FormData) {
     await api.post("/api/customer", {
       name: data.name,
@@ -59,7 +69,7 @@ export function NewCustomerForm({ userId }: { userId: string }) {
       className="flex flex-col mt-6"
       onSubmit={handleSubmit(handleRegisterCustomer)}
     >
-      <label className="mb-1 text-lg font-medium">Full Name</label>
+      <label className="mb-1 font-medium text-lg">Full Name</label>
       <Input
         type="text"
         name="name"
@@ -68,9 +78,9 @@ export function NewCustomerForm({ userId }: { userId: string }) {
         register={register}
       />
 
-      <section className="flex flex-col sm:flex-row gap-2 my-2">
+      <section className="flex sm:flex-row flex-col gap-2 my-2">
         <div className="flex-1">
-          <label className="mb-1 text-lg font-medium">Phone</label>
+          <label className="mb-1 font-medium text-lg">Phone</label>
           <Input
             type="number"
             name="phone"
@@ -81,7 +91,7 @@ export function NewCustomerForm({ userId }: { userId: string }) {
         </div>
 
         <div className="flex-1">
-          <label className="mb-1 text-lg font-medium">Email</label>
+          <label className="mb-1 font-medium text-lg">Email</label>
           <Input
             type="email"
             name="email"
@@ -91,7 +101,7 @@ export function NewCustomerForm({ userId }: { userId: string }) {
           />
         </div>
       </section>
-      <label className="mb-1 text-lg font-medium">Address</label>
+      <label className="mb-1 font-medium text-lg">Address</label>
       <Input
         type="text"
         name="address"
@@ -100,9 +110,10 @@ export function NewCustomerForm({ userId }: { userId: string }) {
         register={register}
       />
 
+      {/* Submit button */}
       <button
         type="submit"
-        className="bg-blue/80 hover:bg-blue my-4 px-2 h-10 text-white font-semibold rounded tracking-wider ease-in-out duration-300"
+        className="bg-blue/80 hover:bg-blue my-4 px-2 rounded h-10 font-semibold text-white tracking-wider duration-300 ease-in-out"
       >
         Register
       </button>

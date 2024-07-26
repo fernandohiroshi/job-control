@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom base styles */
 @layer base {
   * {
     @apply outline-none list-none box-border no-underline;
   }
 
   body {
-    @apply bg-slate-950 antialiased  text-white;
+    @apply bg-slate-950 text-white antialiased;
   }
 }
