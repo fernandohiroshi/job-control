@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply outline-none list-none box-border no-underline;
+  }
+
+  body {
+    @apply bg-slate-950 antialiased  text-white;
+  }
+}
