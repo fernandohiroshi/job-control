@@ -17,6 +17,11 @@ Job Control is a client management and task creation system with a simple dashbo
 3. Install dependencies: `yarn install`
 4. Start the application: `yarn dev`
 
+### Note
+
+Ensure you have set up your .env.local file with the required environment variables, including the database URL and authentication secrets. These are necessary for the application to function properly.
+
+
 ## Key Technologies
 
 - **Next.js**: A powerful React framework for server-side rendering and generating static websites.
