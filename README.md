@@ -22,22 +22,7 @@ Job Control is a client management and task creation system with a simple dashbo
 Ensure you have set up your .env.local file with the required environment variables, including the database URL and authentication secrets. These are necessary for the application to function properly.
 
 
-## Key Technologies
-
-- **Next.js**: A powerful React framework for server-side rendering and generating static websites.
-- **TypeScript**: A statically typed superset of JavaScript that enhances development with type safety and modern features.
-- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
-- **Next-Auth**: A complete authentication solution for Next.js applications.
-- **Prisma**: A next-generation ORM for Node.js and TypeScript. Prisma with MongoDB simplifies database access and management.
-- **MongoDB**: A NoSQL database for storing and managing data in a flexible, scalable way.
-- **Axios**: A promise-based HTTP client for making requests to the backend.
-- **Zod**: A TypeScript-first schema declaration and validation library.
-
-![Technologies](https://skillicons.dev/icons?i=html,ts,react,nextjs,tailwind,prisma,mongodb)
-
 ![Preview](public/jc2.png)
-
-![Preview](public/jc3.png)
 
 
 ## Prisma and MongoDB
@@ -77,6 +62,8 @@ model Ticket {
 }
 ```
 
+![Preview](public/jc3.png)
+
 ## Zod
 
 Zod is a TypeScript-first schema declaration and validation library. It is used in this project to validate data structures and ensure type safety throughout the application.
@@ -99,13 +86,13 @@ The project is deployed at [job-control.vercel.app](https://job-control.vercel.a
 
 ## Key Technologies
 
-- Next.js
-- TypeScript
-- Tailwind CSS
-- Next-Auth
-- Prisma
-- MongoDB
-- Axios
-- Zod
+- **Next.js**: A powerful React framework for server-side rendering and generating static websites.
+- **TypeScript**: A statically typed superset of JavaScript that enhances development with type safety and modern features.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+- **Next-Auth**: A complete authentication solution for Next.js applications.
+- **Prisma**: A next-generation ORM for Node.js and TypeScript. Prisma with MongoDB simplifies database access and management.
+- **MongoDB**: A NoSQL database for storing and managing data in a flexible, scalable way.
+- **Axios**: A promise-based HTTP client for making requests to the backend.
+- **Zod**: A TypeScript-first schema declaration and validation library.
 
-[![](https://skillicons.dev/icons?i=nextjs,ts,tailwind,prisma,mongodb,axios,zod)](https://skillicons.dev)
+![Technologies](https://skillicons.dev/icons?i=html,ts,react,nextjs,tailwind,prisma,mongodb)
