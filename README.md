@@ -4,7 +4,7 @@
 
 Job Control is a client management and task creation system with a simple dashboard. It allows users to register clients, create tasks, and manage them efficiently. The site is fully responsive and was developed with Next.js, TypeScript, Tailwind CSS, Next-Auth, Prisma (ORM), MongoDB, Axios, and Zod.
 
-![Preview](./jc1.png)
+![Preview](public/jc1.png)
 
 
 ## Installation
@@ -30,7 +30,8 @@ Job Control is a client management and task creation system with a simple dashbo
 
 ![Technologies](https://skillicons.dev/icons?i=html,ts,react,nextjs,tailwind,axios,mongodb)
 
-![Preview](./jc2.png)
+![Preview](public/jc3.png)
+
 
 ## Prisma and MongoDB
 
@@ -68,7 +69,9 @@ model Ticket {
   User        User?     @relation(fields: [userId], references: [id])
 }
 
-![Preview](./jc3.png)
+
+![Preview](public/jc3.png)
+
 
 ## Zod
 
