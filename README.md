@@ -75,10 +75,6 @@ Axios is a promise-based HTTP client for the browser and Node.js. It is used to 
 
 Next-Auth is a complete open-source authentication solution for Next.js applications. It provides built-in support for various authentication providers and session management, making it simple to add secure authentication to your application.
 
-## Development Setup
-
-The project includes configuration for Prettier and ESLint, ensuring code consistency and quality. The Tailwind Sorter is integrated to keep Tailwind CSS classes organized.
-
 ## Deployment
 
 The project is deployed at [job-control.vercel.app](https://job-control.vercel.app).
