@@ -28,7 +28,7 @@ Job Control is a client management and task creation system with a simple dashbo
 - **Axios**: A promise-based HTTP client for making requests to the backend.
 - **Zod**: A TypeScript-first schema declaration and validation library.
 
-![Technologies](https://skillicons.dev/icons?i=html,ts,react,nextjs,tailwind,axios,mongodb)
+![Technologies](https://skillicons.dev/icons?i=html,ts,react,nextjs,tailwind,prisma,mongodb)
 
 ![Preview](public/jc3.png)
 
