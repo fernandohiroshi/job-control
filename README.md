@@ -6,6 +6,8 @@ Job Control is a client management and task creation system with a simple dashbo
 
 ![Preview](public/jc1.png)
 
+![Preview](public/jc2.png)
+
 
 ## Installation
 
@@ -20,9 +22,6 @@ Job Control is a client management and task creation system with a simple dashbo
 ### Note
 
 Ensure you have set up your .env.local file with the required environment variables, including the database URL and authentication secrets. These are necessary for the application to function properly.
-
-
-![Preview](public/jc2.png)
 
 
 ## Prisma and MongoDB
