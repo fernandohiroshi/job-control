@@ -70,6 +70,7 @@ model Ticket {
   userId      String?   @db.ObjectId
   User        User?     @relation(fields: [userId], references: [id])
 }
+```
 
 ## Zod
 
