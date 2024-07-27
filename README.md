@@ -67,7 +67,7 @@ model Ticket {
   customer    Customer? @relation(fields: [customerId], references: [id])
   userId      String?   @db.ObjectId
   User        User?     @relation(fields: [userId], references: [id])
-}
+}```
 
 
 ![Preview](public/jc3.png)
