@@ -30,6 +30,8 @@ Job Control is a client management and task creation system with a simple dashbo
 
 ![Technologies](https://skillicons.dev/icons?i=html,ts,react,nextjs,tailwind,prisma,mongodb)
 
+![Preview](public/jc2.png)
+
 ![Preview](public/jc3.png)
 
 
@@ -67,11 +69,7 @@ model Ticket {
   customer    Customer? @relation(fields: [customerId], references: [id])
   userId      String?   @db.ObjectId
   User        User?     @relation(fields: [userId], references: [id])
-}```
-
-
-![Preview](public/jc3.png)
-
+}
 
 ## Zod
 
